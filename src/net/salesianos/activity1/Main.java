@@ -9,6 +9,8 @@ public class Main {
         String fileURL = "src/files/output/file.txt";
 
         String text = getText();
+
+        String formattedText = format(text);
     }
 
     private static String getText() {
@@ -18,7 +20,7 @@ public class Main {
         String text = "";
         boolean isActive = true;
 
-        System.out.println("Introduzca un texto de al menos 30 caracteres: ");
+        System.out.println("\nIntroduzca un texto de al menos 30 caracteres: ");
 
         while (isActive) {
             
@@ -34,6 +36,11 @@ public class Main {
 
         scanner.close();
         return text;
+    }
+
+    private static String format(String text) {
+
+        return text.toUpperCase().replace(' ', '_');
     }
 }
 
