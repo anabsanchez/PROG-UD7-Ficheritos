@@ -1,16 +1,21 @@
 package net.salesianos.activity1;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         
-        String fileURL = "src/files/output/file.txt";
+        String fileURL = "src/net/salesianos/activity1/files/output/file.txt";
 
         String text = getText();
 
         String formattedText = format(text);
+
+        saveToFile(fileURL, formattedText);
     }
 
     private static String getText() {
@@ -41,6 +46,16 @@ public class Main {
     private static String format(String text) {
 
         return text.toUpperCase().replace(' ', '_');
+    }
+
+    private static void saveToFile(String fileURL, String text) {
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileURL))) {
+            writer.write(text);
+            System.out.println("El texto se ha guardado correctamente en el fichero " + fileURL);
+        } catch (IOException ioe) {
+            System.out.println("Error: Problema de I/O.");
+        }
     }
 }
 
