@@ -10,7 +10,12 @@ public class Main {
   
   private static void showText(String filePath) {
     byte[] textBytes = readFileBytes(filePath);
-    
+    for (int i = 0; i < textBytes.length - 1; i++) {
+      System.out.print((char) textBytes[i] + "_" + textBytes[i] + ", ");
+    }
+    if (textBytes.length > 0) {
+      System.out.println((char) textBytes[textBytes.length - 1] + "_" + textBytes[textBytes.length - 1]);
+    }
   }
 
   private static byte[] readFileBytes(String filePath) {
