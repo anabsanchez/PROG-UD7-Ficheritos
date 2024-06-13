@@ -1,3 +1,5 @@
+package net.salesianos.activity2;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
