@@ -1,6 +1,7 @@
 package net.salesianos.activity4;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -50,12 +51,13 @@ public class Main {
         Table table = new Table(color, numberOfLegs);
 
         try {
-            List<Table> tables = MANAGER.readFromFile();
+            ArrayList<Table> tables = MANAGER.readFromFile();
             tables.add(table);
             MANAGER.writeToFile(tables);
             System.out.println("Mesa guardada correctamente.");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Error al guardar la mesa: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
