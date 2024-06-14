@@ -5,10 +5,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Main {
+
+    private static final String FILE_PATH = "src/net/salesianos/activity2/files/activity2.txt";
+
     public static void main(String[] args) {
 
-        String filePath = "src/net/salesianos/files/activity2.txt";
-        showText(filePath);
+        showText(FILE_PATH);
     }
 
     private static void showText(String filePath) {
@@ -20,7 +22,7 @@ public class Main {
         }
 
         if (textBytes.length > 0) {
-            System.out.println((char) textBytes[textBytes.length - 1] + "_" + textBytes[textBytes.length - 1]);
+            System.out.println((char) textBytes[textBytes.length - 1] + "" + textBytes[textBytes.length - 1]);
         }
     }
 
@@ -28,9 +30,9 @@ public class Main {
 
         File file = new File(filePath);
 
-        try (FileInputStream fis = new FileInputStream(file)) {
+        try (FileInputStream fis = new FileInputStream(file)) { // lee byte a byte
             byte[] bytes = new byte[(int) file.length()];
-            fis.read(bytes);
+            fis.read(bytes); // lee el contenido y lo guarda en bytes
             return bytes;
         } catch (IOException ioe) {
             System.out.println("Error: Problema de I/O.");
@@ -38,4 +40,5 @@ public class Main {
 
         return null;
     }
+
 }

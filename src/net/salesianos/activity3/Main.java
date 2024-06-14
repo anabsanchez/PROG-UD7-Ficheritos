@@ -8,9 +8,9 @@ import java.io.IOException;
 
 public class Main {
 
-    private static final String FILE_PATH_1 = "src/net/salesianos/files/activity1.txt";
-    private static final String FILE_PATH_2 = "src/net/salesianos/files/activity2.txt";
-    private static final String FILE_PATH_RESULT = "src/net/salesianos/files/activity3.txt";
+    private static final String FILE_PATH_1 = "src/net/salesianos/activity1/files/activity1.txt";
+    private static final String FILE_PATH_2 = "src/net/salesianos/activity2/files/activity2.txt";
+    private static final String FILE_PATH_RESULT = "src/net/salesianos/activity3/files/activity3.txt";
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class Main {
 
         String mergedContent = "- Contenido del Fichero Uno: " + content1 + "\n" +
                 "- Contenido del Fichero Dos: " + content2 + "\n" +
-                "Mensaje de firma: Proyecto completado :D \n Hecho por: ANCLA :p";
+                "Mensaje de firma: Proyecto completado :D \nHecho por: ANCLA :p";
 
         appendToFile(FILE_PATH_RESULT, mergedContent);
         System.out.println("Ficheros exitosamente fusionados en: " + FILE_PATH_RESULT);

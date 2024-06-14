@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String fileURL = "src/net/salesianos/files/activity1.txt";
+        String fileURL = "src/net/salesianos/activity1/files/activity1.txt";
 
         String text = getText();
 
