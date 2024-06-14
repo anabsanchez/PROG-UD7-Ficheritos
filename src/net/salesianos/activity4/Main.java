@@ -1,4 +1,4 @@
-package net.salesianos.actividad4;
+package net.salesianos.activity4;
 
 import java.io.IOException;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     
-    private static final String FILE_PATH = "src/net/salesianos/actividad4/files/activity4.bin";
+    private static final String FILE_PATH = "src/net/salesianos/activity4/files/activity4.bin";
     private static final TableManager MANAGER = new TableManager(FILE_PATH);
     private static final Scanner SCANNER = new Scanner(System.in);
 
