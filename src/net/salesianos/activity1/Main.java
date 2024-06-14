@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        
-        String fileURL = "src/net/salesianos/activity1/files/output/file.txt";
+
+        String fileURL = "src/net/salesianos/files/activity1.txt";
 
         String text = getText();
 
@@ -28,7 +28,7 @@ public class Main {
         System.out.println("\nIntroduzca un texto de al menos 30 caracteres: ");
 
         while (isActive) {
-            
+
             text = scanner.nextLine();
 
             int textLength = text.length();
@@ -58,6 +58,3 @@ public class Main {
         }
     }
 }
-
-
-
